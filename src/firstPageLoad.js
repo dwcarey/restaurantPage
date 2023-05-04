@@ -2,6 +2,19 @@ import meerkatImage from "./meerkat.png";
 
 const firstPageLoad = (() => {
   const contentDiv = document.getElementById('content');
+  const headerDiv = document.getElementById('header');
+
+  function headerButtons() {
+    const buttonHolder = document.createElement('div');
+    let buttonArray = ['Home', 'Menu', 'Contact'];
+    for (const buttonItem of buttonArray) {
+        const button = document.createElement('button');
+        button.id = buttonItem;
+        button.textContent = buttonItem;
+        buttonHolder.appendChild(button);
+    }
+    return buttonHolder;
+  }
 
   function imageComponent() {
     const imageHolder = document.createElement('div');
@@ -26,6 +39,7 @@ const firstPageLoad = (() => {
     return bodyHolder;
   }
 
+  headerDiv.appendChild(headerButtons());
   contentDiv.appendChild(headerComponent());
   contentDiv.appendChild(imageComponent());
   contentDiv.appendChild(bodyComponent());
