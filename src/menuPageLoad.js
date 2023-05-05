@@ -1,42 +1,40 @@
-import meerkatImage from "./meerkat.png";
+import { menuArray } from "./menuArray";
 
 const menuPageLoad = (() => {
   const contentDiv = document.getElementById('content');
   contentDiv.replaceChildren();
 
-  function imageComponent() {
-    const imageHolder = document.createElement('div');
-    imageHolder.id = 'imageHolder';
-    const meerkat = new Image();
-    meerkat.src = meerkatImage;
-    imageHolder.appendChild(meerkat);
-    return imageHolder;
-  }
-
   function headerComponent() {
     const headerHolder = document.createElement('h1');
     headerHolder.id = 'headerHolder';
-    headerHolder.textContent = 'Welcome to the Menu';
+    headerHolder.textContent = 'Menu';
     return headerHolder;
   }
 
   function bodyComponent() {
     const bodyHolder = document.createElement('p');
     bodyHolder.id = 'bodyHolder';
-    bodyHolder.innerText = `Welcome to the menu
-    Welcome to the menu
-    Welcome to the menu
-    Welcome to the menu
-    Welcome to the menu
-    Welcome to the menu
-    Welcome to the menu
-    Welcome to the menu
-    Welcome to the menu
-    Welcome to the menu`;
+
+    for (let menuItem of menuArray) {
+        const card = document.createElement('div');
+        card.classList.add('menuCard');
+
+        const name = document.createElement('h2');
+        name.classList.add('menuName');
+        name.textContent = menuItem.name;
+
+        const price = document.createElement('h3');
+        price.classList.add('menuPrice');
+        price.textContent = menuItem.price;
+
+        //attach image based on imageID? not sure how to do this
+        card.appendChild(name);
+        card.appendChild(price);
+        bodyHolder.appendChild(card);
+    }
     return bodyHolder;
   }
   contentDiv.appendChild(headerComponent());
-  contentDiv.appendChild(imageComponent());
   contentDiv.appendChild(bodyComponent());
 });
 

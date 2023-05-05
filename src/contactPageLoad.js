@@ -17,21 +17,14 @@ const contactPageLoad = (() => {
   function headerComponent() {
     const headerHolder = document.createElement('h1');
     headerHolder.id = 'headerHolder';
-    headerHolder.textContent = 'Welcome to the Contacts';
+    headerHolder.textContent = 'Contacts';
     return headerHolder;
   }
 
   function bodyComponent() {
     const bodyHolder = document.createElement('p');
     bodyHolder.id = 'bodyHolder';
-    bodyHolder.innerText = `Welcome to the contacts
-    Welcome to the contacts
-    Welcome to the contacts
-    Welcome to the contacts
-    Welcome to the contacts
-    Welcome to the contacts
-    Welcome to the contacts
-    Welcome to the contacts`;
+    //add contacts
     return bodyHolder;
   }
 

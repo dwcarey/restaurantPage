@@ -2,9 +2,11 @@ import './style.css';
 import { firstPageLoad } from './firstPageLoad';
 import { menuPageLoad } from './menuPageLoad';
 import { contactPageLoad } from './contactPageLoad';
+import { menuArray } from './menuArray';
 
 firstPageLoad();
 createButtons();
+console.log(menuArray);
 
 function createButtons() { 
 const headerDiv = document.getElementById('header');
