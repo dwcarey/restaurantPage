@@ -1,4 +1,8 @@
 import { menuArray } from "./menuArray";
+import MeerkatImage from "./MeerkatImage.jpg";
+import DeerImage from "./DeerImage.jpg";
+import BirdImage from "./BirdImage.jpg";
+import RaccoonImage from "./RaccoonImage.jpg";
 
 const menuPageLoad = (() => {
   const contentDiv = document.getElementById('content');
@@ -12,25 +16,47 @@ const menuPageLoad = (() => {
   }
 
   function bodyComponent() {
-    const bodyHolder = document.createElement('p');
+    const bodyHolder = document.createElement('div');
     bodyHolder.id = 'bodyHolder';
+    const menuHolder = document.createElement('div');
+    menuHolder.id = 'menuHolder';
 
     for (let menuItem of menuArray) {
         const card = document.createElement('div');
         card.classList.add('menuCard');
 
-        const name = document.createElement('h2');
-        name.classList.add('menuName');
-        name.textContent = menuItem.name;
+        const image = document.createElement('img');
+        switch(menuItem.imageID) {
+          case 'MeerkatImage':
+            image.src = MeerkatImage;
+            break;
+          case 'DeerImage':
+            image.src = DeerImage;
+            break;
+          case 'BirdImage':
+            image.src = BirdImage;
+            break;
+          case 'RaccoonImage':
+            image.src = RaccoonImage;
+            break;
+          default:
+            image.src = './LionImage.jpg';
+        }
 
-        const price = document.createElement('h3');
-        price.classList.add('menuPrice');
-        price.textContent = menuItem.price;
+        const namePrice = document.createElement('h2');
+        namePrice.classList.add('menuName');
+        namePrice.innerText = `${menuItem.name} 
+        - ${menuItem.price}`;
 
-        //attach image based on imageID? not sure how to do this
-        card.appendChild(name);
-        card.appendChild(price);
-        bodyHolder.appendChild(card);
+        const blurb = document.createElement('h3');
+        blurb.classList.add('blurb');
+        blurb.textContent = `${menuItem.blurb}`;
+
+        card.appendChild(image);
+        card.appendChild(namePrice);
+        card.appendChild(blurb);
+        menuHolder.appendChild(card);
+        bodyHolder.appendChild(menuHolder);
     }
     return bodyHolder;
   }

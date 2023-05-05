@@ -68,7 +68,6 @@ body {
     margin-right: 7vw;
     margin-bottom: 3vh;
     justify-content: flex-start;
-    gap: 3vh;
     border: 3px solid rgb(72, 255, 0);
     background-color: aqua;
 }
@@ -88,14 +87,30 @@ button {
     height: clamp(24px, 3vh, 32px);
 }
 #imageHolder {
-    background: url('./meerkat.png');
+    background: url('./LionImage.jpg');
     width: clamp(250px, 75vw, 500px);
     height: clamp(250px, 75vw, 500px);
 }
 
 #bodyHolder {
-    padding: 3vw;
+    padding: 5vw;
 }
+
+#menuHolder {
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+}
+
+.menuCard {
+    border: 3px solid purple;
+    background-color: yellowgreen;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+
 
 img {
     width: 100%;
@@ -103,7 +118,25 @@ img {
 }
 
 h1 {
-    font-size: clamp(1.5rem, 5vw, 3.7rem);
+    font-size: clamp(1.5rem, 7vw, 5rem);
     font-weight: 600;
-    margin-top: 3vh;
+    margin-top: 2vh;
 }
+
+h2 {
+    font-size: clamp(1rem, 4vw, 2rem);
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+h3 {
+    grid-row: 2;
+    grid-column: 1 / span 2;
+    display: flex;
+    margin-top: 3vh;
+    text-align: center;
+}
+

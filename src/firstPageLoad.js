@@ -1,4 +1,4 @@
-import meerkatImage from "./meerkat.png";
+import LionImage from "./LionImage.jpg";
 
 const firstPageLoad = (() => {
   const contentDiv = document.getElementById('content');
@@ -7,29 +7,30 @@ const firstPageLoad = (() => {
   function imageComponent() {
     const imageHolder = document.createElement('div');
     imageHolder.id = 'imageHolder';
-    const meerkat = new Image();
-    meerkat.src = meerkatImage;
-    imageHolder.appendChild(meerkat);
+    const lion = new Image();
+    lion.src = LionImage;
+    imageHolder.appendChild(lion);
     return imageHolder;
   }
 
   function headerComponent() {
     const headerHolder = document.createElement('h1');
     headerHolder.id = 'headerHolder';
-    headerHolder.textContent = 'Welcome to the Restaurant';
+    headerHolder.textContent = 'The Jungle';
     return headerHolder;
   }
 
   function bodyComponent() {
     const bodyHolder = document.createElement('p');
     bodyHolder.id = 'bodyHolder';
-    bodyHolder.innerText = `Welcome to the Meerkat Restaurant, where our furry friends serve up a feast fit for kings! That's right, our team of highly trained meerkats will scurry around your table, presenting you with delectable dishes from our diverse menu.
+    bodyHolder.innerText = `Welcome to The Jungle, where the king invites you to indulge in a wild dining experience! Our menu features a variety of exotic dishes that will tantalize your taste buds and transport you to the heart of the jungle.
+
+    Our signature dish is the Meerkat Skewers, tender strips of seasoned meat grilled to perfection. For those seeking a lighter option, try our Raccoon Salad, a fresh mix of greens topped with crispy bits of raccoon meat. For a hearty meal, we offer our Venison Stew, slow-cooked with herbs and spices for a rich and savory flavor. And for the adventurous foodies, our Bird Curry is a spicy blend of tropical flavors that will leave you wanting more.
     
-    From succulent insects to juicy grubs, we've got something to satisfy every palate. And don't worry about hygiene - our meerkats are equipped with tiny aprons and hairnets, ensuring a clean and safe dining experience.
+    As you dine, keep an eye out for our resident meerkats who scurry around the restaurant, adding to the ambiance of the jungle. And if you're lucky, you may catch a glimpse of other wildlife roaming outside the restaurant.
     
-    But the fun doesn't stop there! Our meerkat performers will also entertain you with acrobatic displays and adorable antics while you dine. You won't find this kind of unique dining experience anywhere else. 
+    In The Jungle, we offer a unique dining experience that blends the wild and the culinary. So come on down and let us take you on a gastronomic journey through the wilds.`
     
-    So come on down to the Meerkat Restaurant and let our little buddies take your taste buds on a wild adventure!`;
     return bodyHolder;
   }
 

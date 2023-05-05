@@ -1,4 +1,4 @@
-import meerkatImage from "./meerkat.png";
+import meerkatImage from "./MeerkatImage.jpg";
 
 const contactPageLoad = (() => {
   const contentDiv = document.getElementById('content');
@@ -22,7 +22,7 @@ const contactPageLoad = (() => {
   }
 
   function bodyComponent() {
-    const bodyHolder = document.createElement('p');
+    const bodyHolder = document.createElement('div');
     bodyHolder.id = 'bodyHolder';
     //add contacts
     return bodyHolder;
