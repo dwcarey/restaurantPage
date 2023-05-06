@@ -6,7 +6,6 @@ import { menuArray } from './menuArray';
 
 firstPageLoad();
 createButtons();
-console.log(menuArray);
 
 function createButtons() { 
 const headerDiv = document.getElementById('header');
@@ -19,6 +18,7 @@ homeButton.addEventListener('click', (e) => {
     if (e.target.classList.contains('active')) return;
     else {
         firstPageLoad();
+        window.scrollTo(0, 0);
         activeButton(homeButton);
 }});
 
@@ -29,6 +29,7 @@ menuButton.addEventListener('click', (e) => {
     if (e.target.classList.contains('active')) return;
     else {
         menuPageLoad();
+        window.scrollTo(0, 0);
         activeButton(menuButton);
     }
 });
@@ -40,6 +41,7 @@ contactButton.addEventListener('click', (e) => {
     if (e.target.classList.contains('active')) return;
     else {
         contactPageLoad();
+        window.scrollTo(0, 0);
         activeButton(contactButton);
     }
 });

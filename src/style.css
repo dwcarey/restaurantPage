@@ -48,8 +48,20 @@ table {
 /*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
 /*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
 
+@font-face {
+    font-family: "Bangers";
+    src: url(./Bangers-Regular.woff2);
+}
+
+@font-face {
+    font-family: "OpenSans";
+    src: url(./OpenSans-VariableFont_wdth\,wght.woff2);
+}
+
 body {
-    background-color: brown;
+    background-image: url(./640bg.jpg);
+    background-repeat: repeat;
+    background-size: 30%;
     display: grid;
     grid-template-rows: 48px 1fr;
     justify-items: center;
@@ -64,27 +76,36 @@ body {
 }
 
 #content {
+    height: fit-content;
     margin-left: 7vw;
     margin-right: 7vw;
-    margin-bottom: 3vh;
+    margin-top: 64px;
     justify-content: flex-start;
-    border: 3px solid rgb(72, 255, 0);
-    background-color: aqua;
+    border-radius: 32px;
+    background-color: rgba(123, 255, 189, 0.8);
 }
 
 button.active {
-    background-color: pink;
+    background-color: rgb(245, 165, 179);
 }
 #header {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 10vw;
     flex-direction: row;
 }
 
+
 button {
-    background-color: aquamarine;
+    font-family: "Bangers";
+    background-color:  rgba(123, 255, 189);
     width: clamp(70px, 25vw, 200px);
     height: clamp(24px, 3vh, 32px);
+    border-width: 2px;
+    border-style:none;
+    border-color: rgb(245, 165, 179);
+    border-image: initial;
+    border-radius: 8px;
 }
 #imageHolder {
     background: url('./LionImage.jpg');
@@ -95,7 +116,19 @@ button {
 
 #bodyHolder {
     padding: 5vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 48px;
+    z-index: 1; 
+    background-color: rgb(18, 48, 20);
+  }
 
 #menuHolder {
     display: flex;
@@ -104,11 +137,13 @@ button {
 }
 
 .menuCard {
-    border: 3px solid purple;
-    background-color: yellowgreen;
+    border: 3px solid rgb(18, 48, 20);
+    background-color: rgba(123, 255, 189);
+    border-radius: 16px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
+    overflow: hidden;
 }
 
 .lionHolder {
@@ -122,27 +157,39 @@ img {
     height: 100%;
 }
 
+#footer {
+    padding: 5vw;
+}
+
 h1 {
     font-size: clamp(1.5rem, 7vw, 5rem);
-    font-weight: 600;
+    font-weight: 500;
     margin-top: 2vh;
+    font-family: 'Bangers';
 }
 
 h2 {
-    font-size: clamp(1rem, 4vw, 2rem);
-    font-weight: 700;
+    font-size: clamp(0.8rem, 3vw, 2rem);
+    font-weight: 500;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
+    font-family: "Bangers";
 }
 
 h3 {
     grid-row: 2;
     grid-column: 1 / span 2;
     display: flex;
-    margin-top: 3vh;
+    margin-top: 2vh;
     text-align: center;
+    font-family: "OpenSans";
+}
+
+p {
+    font-family: "OpenSans";
+    font-size: clamp(1rem, 3vw, 1.7rem);
 }
 
 #map {
@@ -154,3 +201,30 @@ h3 {
 #contactBlurb {
     margin-bottom: 5vw;
 }
+
+
+@media only screen and (min-width: 1000px) {
+
+    #menuHolder {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1vh;
+    }
+    .lionHolder {
+    margin-top: 2vw;
+    }
+    #map {
+        padding-top: 2vw;
+    }
+    p {
+        width: 45vw;
+        text-align: center;
+    }
+    
+    #imageHolder {
+        margin-top: 2vw;
+    }
+    #bodyHolder {
+        padding-top: 2vw;;
+    }
+} 
