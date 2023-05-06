@@ -100,18 +100,18 @@ button {
     font-family: "Bangers";
     background-color:  rgba(123, 255, 189);
     width: clamp(70px, 25vw, 200px);
-    height: clamp(32px, 4vh, 64px);
+    height: clamp(36px, 3.5vh, 64px);
     border-width: 2px;
     border-style:none;
     border-color: rgb(245, 165, 179);
     border-image: initial;
     border-radius: 8px;
-    font-size: clamp(1rem, 4vw, 2.5rem);
+    font-size: clamp(1rem, 4vw, 2.2rem);
 }
 #imageHolder {
     background: url('./LionImage.jpg');
-    width: clamp(250px, 75vw, 500px);
-    height: clamp(250px, 75vw, 500px);
+    width: clamp(250px, 70vw, 480px);
+    height: clamp(250px, 70vw, 480px);
     margin-top: 5vw;
 }
 
@@ -148,8 +148,8 @@ button {
 }
 
 .lionHolder {
-    width: clamp(250px, 75vw, 500px);
-    height: clamp(250px, 75vw, 500px);
+    width: clamp(250px, 70vw, 480px);
+    height: clamp(250px, 70vw, 480px);
     margin-top: 5vw;
 }
 
