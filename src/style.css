@@ -63,7 +63,7 @@ body {
     background-repeat: repeat;
     background-size: 30%;
     display: grid;
-    grid-template-rows: 48px 1fr;
+    grid-template-rows: 64px 1fr;
     justify-items: center;
 }
 
@@ -79,7 +79,7 @@ body {
     height: fit-content;
     margin-left: 7vw;
     margin-right: 7vw;
-    margin-top: 64px;
+    margin-top: 88px;
     justify-content: flex-start;
     border-radius: 32px;
     background-color: rgba(123, 255, 189, 0.8);
@@ -100,12 +100,13 @@ button {
     font-family: "Bangers";
     background-color:  rgba(123, 255, 189);
     width: clamp(70px, 25vw, 200px);
-    height: clamp(24px, 3vh, 32px);
+    height: clamp(32px, 4vh, 64px);
     border-width: 2px;
     border-style:none;
     border-color: rgb(245, 165, 179);
     border-image: initial;
     border-radius: 8px;
+    font-size: clamp(1rem, 4vw, 2.5rem);
 }
 #imageHolder {
     background: url('./LionImage.jpg');
@@ -125,7 +126,7 @@ button {
     position: fixed;
     top: 0;
     width: 100%;
-    height: 48px;
+    height: 64px;
     z-index: 1; 
     background-color: rgb(18, 48, 20);
   }
@@ -169,7 +170,7 @@ h1 {
 }
 
 h2 {
-    font-size: clamp(0.8rem, 3vw, 2rem);
+    font-size: clamp(1rem, 4vw, 3rem);
     font-weight: 500;
     display: flex;
     align-items: center;
@@ -199,7 +200,7 @@ p {
 }
 
 #contactBlurb {
-    margin-bottom: 5vw;
+    margin-bottom: 2vw;
 }
 
 
