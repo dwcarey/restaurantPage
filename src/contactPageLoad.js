@@ -15,6 +15,12 @@ async function initMap() {
     mapId: "DEMO_MAP_ID",
   });
 
+  const marker = new AdvancedMarkerView({
+    map: map,
+    position: position,
+    title: "The Jungle",
+  });
+
 };
 
 
